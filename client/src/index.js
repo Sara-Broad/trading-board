@@ -5,7 +5,9 @@ import App from './App';
 // change App to .jsx?
 // import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
-import store from './store/index'
+import { store } from './store/index'
+// store --> components --> actions --> reducers --> store
+
 
 ReactDOM.render(
   <Provider store={store}>
