@@ -1,14 +1,8 @@
-import React from 'react'
-import { createStore, combinedReducers } from 'redux'
-// import reducers from '../reducers/reducer file
+import { createStore } from 'redux'
+import rootReducer from '../reducers/reducer'
 
-const store = createStore(
-    combinedReducers({
-        state: reducers
-    })
-    // can install browser extensions
-)
+// const store = createStore(
+//     rootReducer()
+// )
 
-export {
-    store
-}
+export default createStore(rootReducer)
