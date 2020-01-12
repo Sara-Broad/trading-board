@@ -1,20 +1,12 @@
 // import actions
+import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router'
+import reducers from './message'
 
-const initialState = {
-    // user: null
-    examplePropOne: 'user'
-}
+const createRootReducer = (history) => combineReducers({
+    router: connectRouter(history),
+    reducers
+    // rest of reducers
+})
 
-const reducers = (state = initialState, action) => {
-  switch (action.type) {
-    case 'EXAMPLE':
-      return {
-        ...state,
-        examplePropOne: 'newPropOne'
-       }
-    default:
-     return state;
-    }
-}
-
-export default reducers;
+export default createRootReducer
