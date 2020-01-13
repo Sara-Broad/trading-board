@@ -1,11 +1,9 @@
-// import actions
-
 const initialState = {
     // user: null
     examplePropOne: 'user'
 }
 
-const reducers = (state = initialState, action) => {
+const messages = (state = initialState, action) => {
   switch (action.type) {
     case 'EXAMPLE':
       return {
@@ -17,4 +15,4 @@ const reducers = (state = initialState, action) => {
     }
 }
 
-export default reducers;
+export default messages;
