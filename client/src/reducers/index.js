@@ -1,4 +1,3 @@
-// import actions
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router'
 import reducers from './message'

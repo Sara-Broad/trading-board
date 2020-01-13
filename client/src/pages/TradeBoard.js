@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class TeacherPage extends Component {
+class TradeBoard extends Component {
     render () {
         return (
             <div>
-                <h3>Teacher Page</h3>
+                <h3>Buy Nothing Page</h3>
             </div>
         )
     }
 }
 
-export default TeacherPage;
+export default TradeBoard;

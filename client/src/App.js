@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router'
 import RegisterUser from './pages/Register'
-import TeacherPage from './pages/Teacher';
+import TradeBoard from './pages/TradeBoard';
+import HomePage from './pages/Home';
+import LogIn from './pages/Login';
+import Header from './components/Header/Header'
 // import { bindActionCreators } from 'redux';
 
 class App extends Component {
@@ -9,11 +12,12 @@ class App extends Component {
     return (
       <div>
         {/* <h1>Trading-Board</h1> */}
+        <Header />
         <Switch>
-          <Route exact path='/' />
-          <Route exact path='/account' component={RegisterUser} /> 
-          <Route exact path='/teachers' component={TeacherPage} /> 
-
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/trade' component={TradeBoard} /> 
+          <Route exact path='/login' component={LogIn} /> 
+          <Route exact path='/newaccount' component={RegisterUser} /> 
         </Switch>
       </div>
     )
