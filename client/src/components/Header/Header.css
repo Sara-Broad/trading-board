@@ -1,7 +1,4 @@
 .navBar {
-    padding-right: 20px
+    padding-right: 5px
 }
 
-.navBar:last-child {
-   margin-right: inherit
-}

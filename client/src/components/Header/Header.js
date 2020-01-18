@@ -8,11 +8,11 @@ class Header extends React.Component {
         return (
             <div>
                 <Navbar className='navBar'>
-                    <div >
-                    <Nav.Link href='/' className='navBar'>Home</Nav.Link>
-                    <Nav.Link href='/trade' className='navBar'>Trade</Nav.Link>
-                    <Nav.Link href='/login' className='navBar'>Log-in</Nav.Link>
-                    </div>
+                    <Nav>
+                        <Nav.Link href='/home'>Home</Nav.Link>
+                        <Nav.Link href='/trade'>Goods</Nav.Link>
+                        <Nav.Link href='/login'>Log-in</Nav.Link>
+                    </Nav>
                 </Navbar>
             </div>
         )
