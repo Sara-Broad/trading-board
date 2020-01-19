@@ -1,4 +1,8 @@
-.navBar {
-    padding-right: 5px
+.Nav {
+    padding-right: 5px;
+    margin-left: 0
 }
 
+/* .Nav:nth-last-child {
+    padding-left: 30px
+} */

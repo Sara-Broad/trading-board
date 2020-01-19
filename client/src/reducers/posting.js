@@ -6,11 +6,17 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        // case actionTypes.posting.ADD_POSTING
-        case 'EXAMPLE':
-            return {
-                ...state,
-                posting: action.value
+        case actionTypes.GET_POSTINGS: {
+            return { ...state, posting: action.value }
+        }
+        case actionTypes.ADD_POSTINGS: {
+            return { ...state, posting: action.value }
+        }
+        case actionTypes.DELETE_POSTINGS: {
+            return { ...state, posting: action.value }
+        }
+        case actionTypes.EDIT_POSTINGS: {
+            return { ...state, posting: action.value }
         }
         default:
            return state

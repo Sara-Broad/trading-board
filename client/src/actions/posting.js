@@ -1,12 +1,17 @@
 import { actionTypes } from './actionTypes';
 
 const posting = {
-    addPosting: (value) => {
-        return { type: actionTypes.POSTING.ADD_POSTING, value }
+    getPostings: (value) => {
+        return { type: actionTypes.POSTING.GET_POSTINGS, value }
     },
-
-    deletePosting: (value) => {
-        return { type: actionTypes.POSTING.DELETE_POSTING, value } 
+    addPostings: (value) => {
+        return { type: actionTypes.POSTING.ADD_POSTINGS, value }
+    },
+    deletePostinsg: (value) => {
+        return { type: actionTypes.POSTING.DELETE_POSTINGS, value } 
+    },
+    editPostings: (value) => {
+        return { type: actionTypes.POSTING.EDIT_POSTINGS, value }
     }
 }
 
