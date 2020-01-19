@@ -1,9 +1,9 @@
 import React from 'react'
-import './Header.css'
+import './NavHeading.css'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
-class Header extends React.Component {
+class NavHeading extends React.Component {
     render() {
         return (
             <div>
@@ -11,6 +11,8 @@ class Header extends React.Component {
                     <Nav>
                         <Nav.Link href='/home'>Home</Nav.Link>
                         <Nav.Link href='/trade'>Goods</Nav.Link>
+                        <Nav.Link href='/postings'>Postings</Nav.Link>
+                        <Nav.Link href='/messages'>Messages</Nav.Link>
                         <Nav.Link href='/login'>Log-in</Nav.Link>
                     </Nav>
                 </Navbar>
@@ -19,4 +21,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default NavHeading;

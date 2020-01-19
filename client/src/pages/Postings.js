@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LoginCard from '../components/LoginCard/LoginCard'
 
 const styles = {
     header: {
@@ -10,18 +9,18 @@ const styles = {
         textAlign: 'center'
     }
 }
-class LogIn extends Component {
+
+class Postings extends Component {
     render () {
         return (
             <div>
-                <h3 style={( styles.header )}>Log-In</h3>
+                <h3 style={( styles.header )}>Postings</h3>
                 <div>
-                    <h6 style={( styles.holding )}>Not much to see here yet.</h6>
+                    <h6 style={( styles.holding )}>Nothing to see here yet.</h6>
                 </div>
-                <LoginCard />
             </div>
         )
     }
 }
 
-export default LogIn;
+export default Postings;

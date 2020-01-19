@@ -3,7 +3,7 @@ const initialState = {
     examplePropOne: 'user'
 }
 
-const messages = (state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'EXAMPLE':
       return {
@@ -15,4 +15,3 @@ const messages = (state = initialState, action) => {
     }
 }
 
-export default messages;

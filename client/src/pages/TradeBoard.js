@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import TradingCard from '../components/TradingCard/TradingCard'
 
 const styles = {
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: '40px'
 }
 
 class TradeBoard extends Component {

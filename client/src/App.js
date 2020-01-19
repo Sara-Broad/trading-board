@@ -5,7 +5,9 @@ import RegisterUser from './pages/Register'
 import TradeBoard from './pages/TradeBoard';
 import HomePage from './pages/Home';
 import LogIn from './pages/Login';
-import Header from './components/Header/Header'
+import Postings from './pages/Postings'
+import MessagePage from './pages/Messages'
+import NavHeading from './components/NavHeading/NavHeading'
 // import { bindActionCreators } from 'redux';
 
 class App extends Component {
@@ -13,12 +15,14 @@ class App extends Component {
     return (
       <div>
         {/* <h1>Trading-Board</h1> */}
-        <Header />
+        <NavHeading />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/trade' component={TradeBoard} /> 
           <Route exact path='/login' component={LogIn} /> 
           <Route exact path='/newaccount' component={RegisterUser} /> 
+          <Route exact path='/postings' component={Postings} /> 
+          <Route exact path='/messages' component={MessagePage} /> 
         </Switch>
       </div>
     )
