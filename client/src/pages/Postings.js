@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+// import actions
+// bindActionCreators?
 
 const styles = {
     header: {
@@ -11,6 +14,9 @@ const styles = {
 }
 
 class Postings extends Component {
+
+    // componentDidMount()
+
     render () {
         return (
             <div>
@@ -22,5 +28,9 @@ class Postings extends Component {
         )
     }
 }
+
+// mapStateToProps
+// mapDispatchToProps
+// export default connect(mapStateToProps, mapDispatchToProps)(Postings)
 
 export default Postings;

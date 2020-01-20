@@ -1,6 +1,7 @@
 import { actionTypes } from '../actions/actionTypes'
 
 const initialState = {
+    loading: false,
     posting: []
 }
 
