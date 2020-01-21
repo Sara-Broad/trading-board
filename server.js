@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-const PORT = 8000;
+const PORT = 5000;
 const bodyParser = require('body-parser') 
 const app = express()
 const cors = require('cors')  // allows/disallows cross-site communication
@@ -19,3 +19,4 @@ app.listen(PORT, function () {
 });
 
 module.exports = app
+

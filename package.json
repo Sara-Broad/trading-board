@@ -28,6 +28,7 @@
     "color-convert": "^1.9.3",
     "color-name": "^1.1.3",
     "concat-map": "^0.0.1",
+    "concurrently": "^5.0.2",
     "configstore": "^3.1.2",
     "content-disposition": "^0.5.3",
     "content-type": "^1.0.4",
@@ -176,7 +177,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn client\"",
+    "client": "cd client && yarn start",
+    "install": "cd client && yarn install;"
   },
   "repository": {
     "type": "git",
