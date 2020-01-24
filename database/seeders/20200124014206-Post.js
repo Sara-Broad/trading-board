@@ -15,11 +15,6 @@ module.exports = {
           isBetaMember: false
         }], {});
       */
-      // Joan Mitchell
-      // Frida Kahlo
-      // Amy Sherald
-      // Artemisia Gentileschi
-      // Mickalene Thomas
     }]
   ),
 
