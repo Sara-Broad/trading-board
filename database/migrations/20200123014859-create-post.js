@@ -11,7 +11,13 @@ module.exports = {
       title: {
         type: Sequelize.STRING
       },
-      text: {
+      description: {
+        type: Sequelize.STRING
+      },
+      location: {
+        type: Sequelize.STRING
+      },
+      contactName: {
         type: Sequelize.STRING
       },
       createdAt: {
