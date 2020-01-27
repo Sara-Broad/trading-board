@@ -6,10 +6,16 @@ module.exports = (sequelize, DataTypes) => {
     location: DataTypes.STRING,
     contactName: DataTypes.STRING
     // image
-  }, {});
+  })
   Post.associate = function(models) {
     // associations can be defined here
-    // has userPk
+    Post.belongsTo(models.User, {
+      as: 'posts',
+      foreignKey: {
+        name: 'postId'
+        // eventually allowNull:false
+      }
+    })
   };
   return Post;
 };
