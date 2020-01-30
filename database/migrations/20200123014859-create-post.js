@@ -14,18 +14,24 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      location: {
+      city: {
+        type: Sequelize.STRING
+      },
+      state: {
+        type: Sequelize.STRING
+      },
+      neighborhood: {
         type: Sequelize.STRING
       },
       contactName: {
         type: Sequelize.STRING
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       }
     });

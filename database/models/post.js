@@ -3,12 +3,13 @@ module.exports = (sequelize, DataTypes) => {
   const Post = sequelize.define('Post', {
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    location: DataTypes.STRING,
+    city: DataTypes.STRING,
+    state: DataTypes.STRING,
+    neighorhood: DataTypes.STRING,
     contactName: DataTypes.STRING
-    // image
+    // will add image at a later date
   })
   Post.associate = function(models) {
-    // associations can be defined here
     Post.belongsTo(models.User, {
       as: 'posts',
       foreignKey: {
