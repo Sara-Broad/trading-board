@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     contactName: DataTypes.STRING
     // will add image at a later date
   })
-  Post.associate = function(models) {
+  Post.associate = function (models) {
     Post.belongsTo(models.User, {
       as: 'posts',
       foreignKey: {
