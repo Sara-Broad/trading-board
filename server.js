@@ -7,6 +7,7 @@ const cors = require('cors') // allows/disallows cross-site communication
 const morgan = require('morgan') // logs requests
 // const session = require("express-session");
 const passport = require("./database/config/passport");
+const apiRoutes = require("./routes/apiRoutes/index");
 const app = express()
 
 app.use(cors());
@@ -19,9 +20,9 @@ app.use(bodyParser.json());
 // app.use(passport.initialize());
 // app.use(passport.session());
 //
-// Requiring our routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+
+// require('./routes/html-routes.js')(app);
+// require('./routes/apiRoutes/index.js')(app);
 
 app.get('/', (req, res) => {
     res.send('Connected')

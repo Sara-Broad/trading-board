@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
-const db = require("../database/models");
-const passport = require("../database/config/passport");
+const db = require("../../database/models");
+const passport = require("../../database/config/passport");
+const router = require("express").Router();
+
 //
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
