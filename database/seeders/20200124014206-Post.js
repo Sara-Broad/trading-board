@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.bulkInsert(
     "Posts",
@@ -10,7 +8,9 @@ module.exports = {
         city: 'Philadelphia',
         state: 'PA',
         neighborhood: 'East Falls',
-        contactName: 'Joan'
+        contactName: 'Joan',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         title: 'Grey Wool',
@@ -18,7 +18,9 @@ module.exports = {
         city: 'Philadelphia',
         state: 'PA',
         neighborhood: 'East Falls',
-        contactName: 'Joan'
+        contactName: 'Joan',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         title: 'Tubes of Paint',
@@ -26,7 +28,9 @@ module.exports = {
         city: 'Philadelphia',
         state: 'PA',
         neighborhood: 'South Philadelphia',
-        contactName: 'Amy'
+        contactName: 'Amy',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         title: '9X9 Picture Frame',
@@ -34,7 +38,9 @@ module.exports = {
         city: 'Philadelphia',
         state: 'PA',
         neighborhood: 'Center City',
-        contactName: 'Frida'
+        contactName: 'Frida',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]
   ),
@@ -43,3 +49,4 @@ module.exports = {
       return queryInterface.bulkDelete('Posts', null, {});
   }
 };
+

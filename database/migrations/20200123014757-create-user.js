@@ -28,9 +28,22 @@ module.exports = {
         allowNull: true,
         type: Sequelize.DATE
       }
-    });
+    });   
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Users');
   }
 };
+
+function addFkFirm (qi) {
+  return qi.addConstraint('FirmFunds', ['fundId'], {
+    type: 'foreign key',
+    name: 'FK_FUNDS',
+    references: {
+      table: 'Funds',
+      field: 'id'
+    },
+    onDelete: 'cascade',
+    onUpdate: 'cascade'
+  })
+}

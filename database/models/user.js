@@ -10,13 +10,16 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = function (models) {
     // associations can be defined here
     User.hasMany(models.Post, {
-      as: 'user',
+      as: 'users',
       foreignKey: {
         name: 'userId',
         allowNull: false
       }
     })
   };
+  return User;
+};
+
 
   // Creating a custom method for our User model. 
   //This will check if an unhashed password entered by the 
@@ -29,5 +32,3 @@ module.exports = (sequelize, DataTypes) => {
   // User.hook("beforeCreate", function(user) {
   //   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   // });
-  return User;
-};

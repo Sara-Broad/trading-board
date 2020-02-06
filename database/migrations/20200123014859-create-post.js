@@ -33,8 +33,18 @@ module.exports = {
       updatedAt: {
         allowNull: true,
         type: Sequelize.DATE
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'Users',
+          key: 'id'
+        },
+        onUpdate: 'cascade',
+        onDelete: 'cascade'
       }
-    });
+    })
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Posts');

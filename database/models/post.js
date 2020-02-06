@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     Post.belongsTo(models.User, {
       as: 'posts',
       foreignKey: {
-        name: 'postId'
-        // eventually allowNull:false
+        name: 'postId',
+        allowNull: false 
       }
     })
   };
