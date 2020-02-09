@@ -1,5 +1,3 @@
-const { User } = require('../models')
-
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.bulkInsert(
     "Posts", 
