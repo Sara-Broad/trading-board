@@ -1,3 +1,5 @@
+This project is intended to be a replica of the "Buy Nothing" pages seen on social media.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
