@@ -8,10 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
-        type: Sequelize.STRING
-      },
-      lastName: {
+      fullName: {
         type: Sequelize.STRING
       },
       email: {
@@ -35,15 +32,3 @@ module.exports = {
   }
 };
 
-function addFkFirm (qi) {
-  return qi.addConstraint('FirmFunds', ['fundId'], {
-    type: 'foreign key',
-    name: 'FK_FUNDS',
-    references: {
-      table: 'Funds',
-      field: 'id'
-    },
-    onDelete: 'cascade',
-    onUpdate: 'cascade'
-  })
-}
