@@ -5,13 +5,15 @@ const actionTypes = {
         LOGIN_FAIL: "LOGIN_FAIL",
         REGISTER_SUCCESS: "REGISTER_SUCCESS",
         REGISTER_FAIL: "REGISTER_FAIL",
-        ADD_USER: "ADD_USER"
     },
     POSTING: {
         GET_POSTINGS: "GET_POSTINGS",
         ADD_POSTINGS: "ADD_POSTINGS",
         DELETE_POSTINGS: "DELETE_POSTINGS",
         EDIT_POSTINGS: "EDIT_POSTINGS"
+    },
+    USER: {
+        ADD_USER: "ADD_USER"
     },
     MESSAGE: {
         LOAD_MESSAGES: "LOAD_MESSAGES"
