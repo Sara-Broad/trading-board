@@ -72,3 +72,20 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
+
+
+// const mapStateToProps = state => {
+//     return {
+//       availableIcecreams: state.icecream.availableIcecreams
+//     };
+//   };
+  
+//   const mapDispatchToProps = dispatch => {
+//     return {
+//       sellIcecream: () => {
+//         dispatch(sellIcecream());
+//       }
+//     };
+//   };
+  
+//   export default connect(mapStateToProps, mapDispatchToProps)(IcecreamContainer);

@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router'
+// import actionTypes from '.././actions'
+
 import messages from './message'
 import postings from './posting'
 import users from './user'
