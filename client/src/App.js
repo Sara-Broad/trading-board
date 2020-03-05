@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { Route, Switch } from 'react-router'
 import RegisterUser from './pages/Register'
 import TradeBoard from './pages/TradeBoard';
@@ -29,16 +31,15 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
 
-// const mapStateToProps = (state) => {
-//   return {
+const mapStateToProps = (state) => {
+  const { router } = state
+  return { router }
+}
 
-//   }
-// }
+export default connect(mapStateToProps)(App)
 
-// const mapDispatchToProps = (dispatch) => {
-//   return bindActionCreators({exampleImportedAction}, dispatch)
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(App)
+App.propTypes = {
+  router: PropTypes.object.isRequired
+}

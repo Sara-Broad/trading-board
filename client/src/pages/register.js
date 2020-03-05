@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import NewAccountCard from '../components/NewAccountCard/NewAccountCard'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as actions from '.././actions'
-
+// import * as actions from '.././actions'
+import { user } from '.././actions/index'
 const styles = {
     header: {
         textAlign: 'center',
@@ -56,22 +56,29 @@ class RegisterUser extends Component {
     }
 }
 
+export default connect(
+    null,
+    {
+      addUser: addUser
+    }
+  )(RegisterUser);
+
 // export default RegisterUser;
 
-const mapStateToProps = (state) => ({
-    // const { user } = state
-    // return ( user )
-    user: state.user
-})
+// const mapStateToProps = (state) => ({
+//     // const { user } = state
+//     // return ( user )
+//     user: state.user
+// })
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators(
-        { ...actions.user },
-        dispatch
-    )
-}
+// const mapDispatchToProps = (dispatch) => {
+//     return bindActionCreators(
+//         { ...actions.user },
+//         dispatch
+//     )
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
+// export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
 
 
 // const mapStateToProps = state => {
