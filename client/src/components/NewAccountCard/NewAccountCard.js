@@ -57,6 +57,7 @@ import { dispatch } from 'rxjs/internal/observable/pairs';
 
 const TradingCard = props => (
     
+    
     <div>
     <Card className="cardBody">
        <Card.Title className="heading">Get Stuff</Card.Title>

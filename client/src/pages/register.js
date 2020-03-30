@@ -31,10 +31,12 @@ class RegisterUser extends Component {
       }
 
       handleFormSubmit = event => {
+          // need to call addUser here
           event.preventDefault()
       }
    
     render () {
+        const email = 'email@test.com'
         return (
             <div>
                 <h3 style={( styles.header )}>New User Page</h3>
@@ -46,7 +48,8 @@ class RegisterUser extends Component {
                     handleInputChage={this.handleInputChage}
                     handleFormSubmit={this.handleFormSubmit}
                     name={this.state.name}
-                    email={this.state.email}
+                    // email={this.state.email}
+                    email={email}
                     password={this.state.password}
                     // renterPassword={this.state.renterPassword}
                     />
@@ -56,14 +59,14 @@ class RegisterUser extends Component {
     }
 }
 
-export default connect(
-    null,
-    {
-      addUser: addUser
-    }
-  )(RegisterUser);
+// export default connect(
+//     null,
+//     {
+//       addUser: addUser
+//     }
+//   )(RegisterUser);
 
-// export default RegisterUser;
+export default RegisterUser;
 
 // const mapStateToProps = (state) => ({
 //     // const { user } = state
