@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 // import * as actions from '.././actions'
 import { user } from '.././actions/index'
+// import { addUser } 
+
 const styles = {
     header: {
         textAlign: 'center',
@@ -22,6 +24,12 @@ class RegisterUser extends Component {
         password: "",
         // renterPassword: ""
     }
+
+     componentDidMount() {
+         // this.props
+         // this.props.user.addUser
+         user.addUser
+     }
 
       handleInputChage = event => {
           const { name, value } = event.target;
@@ -59,13 +67,7 @@ class RegisterUser extends Component {
     }
 }
 
-// export default connect(
-//     null,
-//     {
-//       addUser: addUser
-//     }
-//   )(RegisterUser);
-
+// export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
 export default RegisterUser;
 
 // const mapStateToProps = (state) => ({
@@ -74,12 +76,36 @@ export default RegisterUser;
 //     user: state.user
 // })
 
+// used to dispatch the action that receives the dispatch as method and returns the callback function.
 // const mapDispatchToProps = (dispatch) => {
 //     return bindActionCreators(
 //         { ...actions.user },
 //         dispatch
 //     )
 // }
+
+const mapStateToProps = state => {
+    return {
+        blogs: state.blogs.all,
+        paginate: state.blogs.paginate,
+        totalCount: state.blogs.totalCount
+    }
+}
+
+const mapDispatchToProps = dispatch => ({
+    fetchBlogs: (paginate, category, sortingby) => {
+        dispatch(fetchBlogs(paginate, category, sortingby));
+    },
+    fetchBlogDetails: (id, paginate) => {
+        dispatch(fetchBlogDetails(id, paginate));
+    },
+    changePaginate: (paginate) => {
+        dispatch(changePaginate(paginate));
+    },
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogList);
+
 
 // export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
 
