@@ -1,8 +1,8 @@
 import { actionTypes } from "./actionTypes";
 
 const user = {
-    addUser: (value) => {
-        return { type: actionTypes.USER.ADD_USER, value }
+    addUser: (user) => {
+        return { type: actionTypes.USER.ADD_USER, user }
     }
 }
 

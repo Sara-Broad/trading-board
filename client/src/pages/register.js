@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import NewAccountCard from '../components/NewAccountCard/NewAccountCard'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import Card from 'react-bootstrap/Card'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-// import * as actions from '.././actions'
-import { user } from '.././actions/index'
+// import Card from 'react-bootstrap/Card'
+// import Form from 'react-bootstrap/Form'
+// import Button from 'react-bootstrap/Button'
+import PropTypes from 'prop-types'
+import * as actions from '.././actions'
+// import { user } from '.././actions/index'
 // import { addUser } 
 
 const styles = {
@@ -54,18 +55,19 @@ class RegisterUser extends Component {
     }
 
     handleFormSubmit = event => {
-        // need to call addUser here
         event.preventDefault()
-        alert(this.state.user.name)
+        this.props.dispatch(actions.user.addUser(this.state.user))
     }
 
     render() {
-        const email = 'email@test.com'
         return (
             <div>
                 <form onSubmit={this.handleFormSubmit} className="heading">
                   <input type="text" onChange={this.handleInputChange} value={this.state.user.name}></input>
                   <input type="submit" value="Save" />
+                  { this.props.users.map(user => (
+                      <div key={user.name}>{user.name}</div>
+                  ))}
                 </form>
             </div>
             // <div>
@@ -124,21 +126,21 @@ class RegisterUser extends Component {
     }
 }
 
-// from video
-// const mapStateToProps = (state, ownProps) => {
-// return { users: state.users}
-// }
+RegisterUser.propTypes = {
+    users: PropTypes.array.isRequired,
+    dispatch: PropTypes.func.isRequired
+}
+
+const mapStateToProps = (state) => {
+  return {
+      users: state.users
+  }
+}
+
+export default connect(mapStateToProps)(RegisterUser)
+// export default RegisterUser;
 
 
-
-// export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
-export default RegisterUser;
-
-// const mapStateToProps = (state) => ({
-//     // const { user } = state
-//     // return ( user )
-//     user: state.user
-// })
 
 // used to dispatch the action that receives the dispatch as method and returns the callback function.
 // const mapDispatchToProps = (dispatch) => {
