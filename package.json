@@ -94,6 +94,7 @@
     "is-stream": "^1.1.0",
     "isexe": "^2.0.0",
     "js-tokens": "^4.0.0",
+    "json-server": "^0.16.1",
     "jsonwebtoken": "^8.5.1",
     "latest-version": "^3.1.0",
     "loose-envify": "^1.4.0",
@@ -191,6 +192,8 @@
     "start": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn client\"",
     "client": "cd client && yarn start",
+    "prestart:api": "node tools/createMockDb.js",
+    "start:api": "node tools/apiServer.js",
     "install": "cd client && yarn install;"
   },
   "repository": {

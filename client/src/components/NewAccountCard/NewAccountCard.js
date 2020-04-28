@@ -21,7 +21,7 @@ import { dispatch } from 'rxjs/internal/observable/pairs';
 //         const { user } = this.props
 //         return (
 //             <div>
-//             <Card className="cardBody">
+            // <Card className="cardBody">
 //                <Card.Title className="heading">Get Stuff</Card.Title>
 //                   <Card.Body>
 //                        <Form>

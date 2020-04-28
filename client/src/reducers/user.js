@@ -1,11 +1,9 @@
-const intialState = {
-    users: []
-}
+import { actionTypes } from "../actions/actionTypes";
 
-export default (state = intialState, action) => {
+export default (state = [], action) => {
     switch (action.type) {
-        case 'ADD_USER':
-         return { ...state, users: action.value }
+        case actionTypes.USER.ADD_USER:
+        return [...state, { ...action.user }]
             default:
                 return state;
     }
