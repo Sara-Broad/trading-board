@@ -2,7 +2,7 @@ import { actionTypes } from './actionTypes';
 import axios from 'axios';
 
 const ROOT_URL = 'http://localhost:3000/posting'
-
+// action trigger change
 const posting = {
     getPostings: (value) => {
         // axios.get

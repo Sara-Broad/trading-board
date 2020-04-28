@@ -15,3 +15,5 @@ const createRootReducer = (history) => combineReducers({
 })
 
 export default createRootReducer
+
+// reducers accept a current state and an action and return a new state

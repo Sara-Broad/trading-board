@@ -10,6 +10,7 @@ import LogIn from './pages/Login';
 import Postings from './pages/Postings'
 import MessagePage from './pages/Messages'
 import NavHeading from './components/NavHeading/NavHeading'
+import PageNotFound from './components/PageNotFound/PageNotFound'
 // import { bindActionCreators } from 'redux';
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route exact path='/newaccount' component={RegisterUser} /> 
           <Route exact path='/postings' component={Postings} /> 
           <Route exact path='/messages' component={MessagePage} /> 
+          <Route component={PageNotFound} />
         </Switch>
       </div>
     )
