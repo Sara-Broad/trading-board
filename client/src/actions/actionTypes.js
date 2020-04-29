@@ -13,7 +13,9 @@ const actionTypes = {
         EDIT_POSTINGS: "EDIT_POSTINGS"
     },
     USER: {
-        ADD_USER: "ADD_USER"
+        ADD_USER: "ADD_USER",
+        // GET_USERS: "GET_USERS",
+        LOAD_USERS_SUCCESS: "LOAD_USERS_SUCCESS"
     },
     MESSAGE: {
         LOAD_MESSAGES: "LOAD_MESSAGES"

@@ -6,3 +6,7 @@ export function getUsers() {
     .then(handleResponse)
     .catch(handleError);
 }
+
+export function loadUsersSuccess(users) {
+  return users
+}

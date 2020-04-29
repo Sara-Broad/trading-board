@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import NewAccountCard from '../components/NewAccountCard/NewAccountCard'
+// import NewAccountCard from '../components/NewAccountCard/NewAccountCard'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-// import Card from 'react-bootstrap/Card'
-// import Form from 'react-bootstrap/Form'
-// import Button from 'react-bootstrap/Button'
 import PropTypes from 'prop-types'
 import * as actions from '.././actions'
 
@@ -27,9 +24,9 @@ class RegisterUser extends Component {
         }
     
     componentDidMount() {
-        // this.props
-        // this.props.user.addUser
-        //  user.addUser
+        this.props.actions.loadUsersSuccess().catch(error => {
+            alert("loding users failed" + error)
+        })
     }
 
     handleInputChange = event => {
@@ -70,14 +67,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // addUser: user => dispatch(actions.user.addUser(user))
         actions: bindActionCreators(actions.user, dispatch)
     }
 }
 
-// const mapDispatchToProps = {
-//     addUser: actions.addUser
-// }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(RegisterUser)
 
