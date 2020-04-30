@@ -7,6 +7,3 @@ export function getUsers() {
     .catch(handleError);
 }
 
-export function loadUsersSuccess(users) {
-  return users
-}

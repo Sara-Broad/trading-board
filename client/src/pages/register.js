@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import * as actions from '.././actions'
+import * as actions from '../actions'
 
 const styles = {
     header: {
@@ -24,9 +24,12 @@ class RegisterUser extends Component {
         }
     
     componentDidMount() {
-        this.props.actions.loadUsersSuccess().catch(error => {
-            alert("loding users failed" + error)
+        this.props.actions.getUsers().catch(error => {
+            alert("Loading courses failed" + error)
         })
+        // this.props.actions.users.loadUsersSuccess().catch(error => {
+        //     alert("loading users failed" + error)
+        // })
     }
 
     handleInputChange = event => {
