@@ -1,18 +1,23 @@
 import { actionTypes } from '../actions/actionTypes'
 
-const initialState = {
-    loading: false,
-    posting: []
-}
+// const initialState = {
+//     loading: false,
+//     posting: []
+// }
 
-export default (state = initialState, action) => {
+export default (state = [], action) => {
     switch (action.type) {
+        case actionTypes.POSTING.LOAD_POSTINGS_SUCCESS: 
+            return action.value
         case actionTypes.POSTING.GET_POSTINGS: {
             return { ...state, posting: action.value }
         }
         case actionTypes.POSTING.ADD_POSTINGS: {
-            return { ...state, posting: action.value }
+            return [...state, { ...action.posting }]
         }
+        // case actionTypes.POSTING.ADD_POSTINGS: {
+        //     return { ...state, posting: action.value }
+        // }
         case actionTypes.POSTING.DELETE_POSTINGS: {
             return { ...state, posting: action.value }
         }

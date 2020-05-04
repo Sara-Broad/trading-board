@@ -13,7 +13,8 @@ const user = {
             return userApi
             .getUsers()
             .then((users) => 
-                dispatch(users.loadUsersSuccess(users))
+                // dispatch(users.loadUsersSuccess(users))
+                dispatch(user.loadUsersSuccess(users))
             )
             .catch((error) => console.log(error))
         }

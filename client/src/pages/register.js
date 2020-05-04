@@ -5,15 +5,15 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import * as actions from '../actions'
 
-const styles = {
-    header: {
-        textAlign: 'center',
-        marginBottom: '40px'
-    },
-    holding: {
-        textAlign: 'center'
-    }
-}
+// const styles = {
+//     header: {
+//         textAlign: 'center',
+//         marginBottom: '40px'
+//     },
+//     holding: {
+//         textAlign: 'center'
+//     }
+// }
 
 class RegisterUser extends Component {
         state = {
