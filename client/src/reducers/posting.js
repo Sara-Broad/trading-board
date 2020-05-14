@@ -8,7 +8,8 @@ import { actionTypes } from '../actions/actionTypes'
 export default (state = [], action) => {
     switch (action.type) {
         case actionTypes.POSTING.LOAD_POSTINGS_SUCCESS: 
-            return action.value
+            // return action.value
+            return action.posting
         case actionTypes.POSTING.GET_POSTINGS: {
             return { ...state, posting: action.value }
         }

@@ -5,16 +5,16 @@ const user = {
     addUser: (user) => {
         return { type: actionTypes.USER.ADD_USER, user }
     },
-    loadUsersSuccess(users) {
+    loadUsersSuccess: (users) => {
         return { type: actionTypes.USER.LOAD_USERS_SUCCESS, users}
     },
-    getUsers: () => {
+    loadUsers: () => {
         return (dispatch) => {
             return userApi
             .getUsers()
             .then((users) => 
-                // dispatch(users.loadUsersSuccess(users))
-                dispatch(user.loadUsersSuccess(users))
+                dispatch(users.loadUsersSuccess(users))
+                // dispatch(loadUsersSuccess(users))
             )
             .catch((error) => console.log(error))
         }

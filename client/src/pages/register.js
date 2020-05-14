@@ -24,12 +24,13 @@ class RegisterUser extends Component {
         }
     
     componentDidMount() {
-        this.props.actions.getUsers().catch(error => {
-            alert("Loading courses failed" + error)
-        })
-        // this.props.actions.users.loadUsersSuccess().catch(error => {
-        //     alert("loading users failed" + error)
+        // this.props.actions.getUsers().catch(error => {
+        //     alert("Loading courses failed" + error)
         // })
+        this.props.actions.users.loadUsersSuccess()
+        .catch(error => {
+            alert("loading users failed" + error)
+        })
     }
 
     handleInputChange = event => {

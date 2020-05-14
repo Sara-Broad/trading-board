@@ -15,7 +15,7 @@ const actionTypes = {
     },
     USER: {
         ADD_USER: "ADD_USER",
-        // GET_USERS: "GET_USERS",
+        // LOAD_USERS: "LOAD_USERS",
         LOAD_USERS_SUCCESS: "LOAD_USERS_SUCCESS"
     },
     MESSAGE: {
