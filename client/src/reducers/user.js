@@ -1,7 +1,9 @@
 import { actionTypes } from "../actions/actionTypes";
+// import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
-    users: []
+    users: [],
+    isLoading: false
 }
 
 export default (state = initialState.users, action) => {
@@ -10,8 +12,8 @@ export default (state = initialState.users, action) => {
           return [...state, { ...action.user }]
         case actionTypes.USER.LOAD_USERS_SUCCESS:
           return action.users
-        // case actionTypes.USER.GET_USERS:
-        //     return action.users
+        case actionTypes.USER.LOAD_USERS:
+            return action.users
         default:
           return state;
     }
