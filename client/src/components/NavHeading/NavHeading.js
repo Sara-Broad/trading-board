@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
 const NavHeading = () => {
-        const activeStyle = { color: "#008080" }
+        // const activeStyle = { color: "#008080" }
         return (
             <div>
                 <Navbar>

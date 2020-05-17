@@ -7,6 +7,7 @@ const actionTypes = {
         REGISTER_FAIL: "REGISTER_FAIL",
     },
     POSTING: {
+        LOAD_POSTINGS_SUCCESS: "LOAD_POSTINGS_SUCCESS",
         GET_POSTINGS: "GET_POSTINGS",
         ADD_POSTINGS: "ADD_POSTINGS",
         DELETE_POSTINGS: "DELETE_POSTINGS",
@@ -14,7 +15,7 @@ const actionTypes = {
     },
     USER: {
         ADD_USER: "ADD_USER",
-        // GET_USERS: "GET_USERS",
+        // LOAD_USERS: "LOAD_USERS",
         LOAD_USERS_SUCCESS: "LOAD_USERS_SUCCESS"
     },
     MESSAGE: {

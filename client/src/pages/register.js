@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import * as actions from '.././actions'
+import * as actions from '../actions'
 
-const styles = {
-    header: {
-        textAlign: 'center',
-        marginBottom: '40px'
-    },
-    holding: {
-        textAlign: 'center'
-    }
-}
+// const styles = {
+//     header: {
+//         textAlign: 'center',
+//         marginBottom: '40px'
+//     },
+//     holding: {
+//         textAlign: 'center'
+//     }
+// }
 
 class RegisterUser extends Component {
         state = {
@@ -22,13 +22,17 @@ class RegisterUser extends Component {
                 // email: ''
             }
         }
-    
-    componentDidMount() {
-        this.props.actions.loadUsersSuccess().catch(error => {
-            alert("loding users failed" + error)
-        })
-    }
 
+    componentDidMount() {
+        const { users } = this.props
+        if (users.length === 0) {
+            this.props.loadUsers()
+            // actions.user.loadUsers().catch(error => {
+            //     alert("Loading users failes" + error)
+            // })
+        }
+    }
+  
     handleInputChange = event => {
         const user = { ...this.state.user, name: event.target.value }
         this.setState({user})
@@ -56,18 +60,22 @@ class RegisterUser extends Component {
 
 RegisterUser.propTypes = {
     users: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+    actions: PropTypes.object.isRequired,
+    loadUsers: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => {
-  return {
-      users: state.users
-  }
+    const { router, users } = state
+    return { router, users }
+//   return {
+//       users: state.users
+//   }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        actions: bindActionCreators(actions.user, dispatch)
+        actions: bindActionCreators({ ...actions.user }, dispatch),
+        loadUsers: bindActionCreators(actions.user.loadUsers, dispatch)
     }
 }
 
