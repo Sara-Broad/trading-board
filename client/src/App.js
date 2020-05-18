@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
+// import React, { Component } from 'react'
+import React from "react"
 import { Route, Switch } from 'react-router'
 import RegisterUser from './pages/Register'
 import TradeBoard from './pages/TradeBoard';
@@ -11,13 +10,12 @@ import Postings from './pages/Postings'
 import MessagePage from './pages/Messages'
 import NavHeading from './components/NavHeading/NavHeading'
 import PageNotFound from './components/PageNotFound/PageNotFound'
-// import { bindActionCreators } from 'redux';
 
-class App extends Component {
-  render() {
+// class App extends Component {
+//   render() {
+  function App() {
     return (
       <div>
-        {/* <h1>Trading-Board</h1> */}
         <NavHeading />
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -31,17 +29,17 @@ class App extends Component {
       </div>
     )
   }
-}
 
-// export default App;
 
-const mapStateToProps = (state) => {
-  const { router } = state
-  return { router }
-}
+export default App;
 
-export default connect(mapStateToProps)(App)
+// const mapStateToProps = (state) => {
+//   const { router } = state
+//   return { router }
+// }
 
-App.propTypes = {
-  router: PropTypes.object.isRequired
-}
+// export default connect(mapStateToProps)(App)
+
+// App.propTypes = {
+//   router: PropTypes.object.isRequired
+// }
