@@ -1,11 +1,25 @@
 import { actionTypes } from './actionTypes';
+import * as postingApi from "../api/postingApi"
+import { dispatch } from 'rxjs/internal/observable/range';
 // import axios from 'axios';
 
 // const ROOT_URL = 'http://localhost:3000/posting'
 // action trigger change
 const posting = {
-    loadPostingSuccess: (value) => {
-      return { type: actionTypes.POSTING.LOAD_POSTINGS_SUCCESS, value }
+    loadPostingSuccess: (postings) => {
+      return { type: actionTypes.POSTING.LOAD_POSTINGS_SUCCESS, postings }
+    },
+    loadPostings: () => {
+        return (dispatch) => {
+            return postingApi
+                .getPostings()
+                .then(postings => {
+                    dispatch(posting.loadPostingSuccess(postings))
+                })
+                .catch(error => {
+                    throw error;
+                })
+        }
     },
     getPostings: (value) => {
         // axios.get

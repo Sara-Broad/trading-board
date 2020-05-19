@@ -54,13 +54,6 @@ class RegisterUser extends Component {
     }
 }
 
-       {/* <form onSubmit={this.handleFormSubmit} className="heading">
-                  <input type="text" onChange={this.handleInputChange} value={this.state.user.name}></input>
-                  <input type="submit" value="Save" />
-                </form> */}
-   {/* { this.props.users.map(user => (
-                      <div key={user.name}>{user.name}</div>
-                ))} */}
 RegisterUser.propTypes = {
     users: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired,

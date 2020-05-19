@@ -1,15 +1,15 @@
 import { actionTypes } from '../actions/actionTypes'
 
-// const initialState = {
-//     loading: false,
-//     posting: []
-// }
+const initialState = {
+    postings: [],
+    isLoading: false
+}
 
-export default (state = [], action) => {
+export default (state = initialState.postings, action) => {
     switch (action.type) {
         case actionTypes.POSTING.LOAD_POSTINGS_SUCCESS: 
             // return action.value
-            return action.posting
+            return action.postings
         case actionTypes.POSTING.GET_POSTINGS: {
             return { ...state, posting: action.value }
         }

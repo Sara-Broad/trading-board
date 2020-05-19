@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import actions
-// bindActionCreators?
+import * as actions from '../actions'
 
 const styles = {
     header: {
@@ -14,7 +12,16 @@ const styles = {
 }
 
 class Postings extends Component {
-
+    state = {
+        posting: {
+            title: "",
+            description: "",
+            city: "",
+            state: "",
+            neighorhood: "",
+            contactName: "",
+        }
+    }
     // componentDidMount()
 
     render () {
@@ -27,6 +34,11 @@ class Postings extends Component {
             </div>
         )
     }
+}
+
+Postings.propTypes = {
+    postings: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired
 }
 
 // mapStateToProps
