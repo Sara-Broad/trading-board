@@ -1,6 +1,5 @@
 import { actionTypes } from './actionTypes';
 import * as postingApi from "../api/postingApi"
-import { dispatch } from 'rxjs/internal/observable/range';
 // import axios from 'axios';
 
 // const ROOT_URL = 'http://localhost:3000/posting'

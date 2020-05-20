@@ -43,7 +43,8 @@ const users = [
     { id: 3, name: "Katherine Johnson" }
   ];
   
-  const newPosting = [{
+  const newPostings = [
+  {
     id: 1,
     title: "Extra Beakers",
     description: "Three test beakers available",
@@ -51,7 +52,7 @@ const users = [
     state: "PA",
     neighorhood: "West Philadelphia",
     contactName: "Marie C.",
-    userId: "1"
+    // userId: 1
   },
   {
     id: 2,
@@ -61,7 +62,7 @@ const users = [
     state: "PA",
     neighorhood: "Center City",
     contactName: "Wonder W.",
-    userId: "2"
+    // userId: 2
   },
   {
     id: 3,
@@ -71,13 +72,14 @@ const users = [
     state: "PA",
     neighorhood: "South Philadelphia",
     contactName: "Faith R.",
-    userId: "5"
-  }];
+    // userId: 5
+  }
+];
   
   // Using CommonJS style export so we can consume via Node (without using Babel-node)
   module.exports = {
     users,
     registeredUsers,
-    newPosting
+    newPostings
   };
   
