@@ -38,11 +38,11 @@ const PostingList = ({ postings }) => (
                             <Link to={"/postings/" + user.slug}></Link>
                         </td> */}
                         <td>{posting.title}</td>
-                        <td>{posting.description}</td>
+                        {/* <td>{posting.description}</td>
                         <td>{posting.city}</td>
                         <td>{posting.state}</td>
                         <td>{posting.neighorhood}</td>
-                        <td>{posting.contactName}</td>
+                        <td>{posting.contactName}</td> */}
                     </tr>
                 )
             })}

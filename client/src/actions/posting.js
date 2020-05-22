@@ -5,7 +5,7 @@ import * as postingApi from "../api/postingApi"
 // const ROOT_URL = 'http://localhost:3000/posting'
 // action trigger change
 const posting = {
-    loadPostingSuccess: (postings) => {
+    loadPostingsSuccess: (postings) => {
       return { type: actionTypes.POSTING.LOAD_POSTINGS_SUCCESS, postings }
     },
     loadPostings: () => {
@@ -13,17 +13,12 @@ const posting = {
             return postingApi
                 .getPostings()
                 .then(postings => {
-                    dispatch(posting.loadPostingSuccess(postings))
+                    dispatch(posting.loadPostingsSuccess(postings))
                 })
                 .catch(error => {
                     throw error;
                 })
         }
-    },
-    getPostings: (value) => {
-        // axios.get
-        // request = axios.get(url)
-        return { type: actionTypes.POSTING.GET_POSTINGS, value } // payload:request
     },
     addPostings: (value) => {
         // axios.post

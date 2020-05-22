@@ -8,14 +8,12 @@ const actionTypes = {
     },
     POSTING: {
         LOAD_POSTINGS_SUCCESS: "LOAD_POSTINGS_SUCCESS",
-        GET_POSTINGS: "GET_POSTINGS",
         ADD_POSTINGS: "ADD_POSTINGS",
         DELETE_POSTINGS: "DELETE_POSTINGS",
         EDIT_POSTINGS: "EDIT_POSTINGS"
     },
     USER: {
         ADD_USER: "ADD_USER",
-        // LOAD_USERS: "LOAD_USERS",
         LOAD_USERS_SUCCESS: "LOAD_USERS_SUCCESS"
     },
     MESSAGE: {
