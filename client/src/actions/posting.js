@@ -6,7 +6,7 @@ import * as postingApi from "../api/postingApi"
 // action trigger change
 const posting = {
     loadPostingsSuccess: (postings) => {
-      return { type: actionTypes.POSTING.LOAD_POSTINGS_SUCCESS, postings }
+        return { type: actionTypes.POSTING.LOAD_POSTINGS_SUCCESS, postings }
     },
     loadPostings: () => {
         return (dispatch) => {

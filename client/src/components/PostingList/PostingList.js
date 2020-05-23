@@ -15,7 +15,7 @@
 
 import React from "react"
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PostingList = ({ postings }) => (
     <table className="table">
@@ -34,9 +34,9 @@ const PostingList = ({ postings }) => (
             {postings.map(posting => {
                 return (
                     <tr key={posting.id}>
-                        {/* <td>
-                            <Link to={"/postings/" + user.slug}></Link>
-                        </td> */}
+                        <td>
+                            <Link to={"/postings/" + posting.slug}></Link>
+                        </td>
                         <td>{posting.title}</td>
                         {/* <td>{posting.description}</td>
                         <td>{posting.city}</td>
