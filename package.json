@@ -13,7 +13,7 @@
     "array-flatten": "^1.1.1",
     "axios": "^0.19.2",
     "balanced-match": "^1.0.0",
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "bcrypt-nodejs": "^0.0.3",
     "bcryptjs": "^2.4.3",
     "binary-extensions": "^2.0.0",
